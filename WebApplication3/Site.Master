@@ -15,7 +15,159 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-<style type="text/css">  
+<style type="text/css"> 
+    * {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  /*background-color: #d4af37;*/
+}
+
+h2 {
+  color: #b29700;
+}
+
+h3 {
+  color: #1abc9c;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 13%;
+  /*width: 100%;*/
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  }
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+  color: #ffd700;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #000000;
+  /*#EEBC27;*/
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+.navbar img {
+  float: left;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ffd700;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #b29700 ;
+  /*f9a602*/
+  color: black;
+
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: black;
+  /*#ffd700;*/
+  width: 100%;
+  padding: 20px;
+  align-self: center;
+}
+
+.mainimg {
+  /*background-color: #aaa;*/
+  /*width: 100%;*/
+  padding: 20px;
+  align-self: center;
+}
+
+/*.fakeimg img {
+  align-self: center;
+}*/
+
+/* Footer */
+.footer {
+  padding: 10px;
+  text-align: center;
+  background: #ddd;
+  /*#d4af37;*/
+  /**/
+}
+
+.pdtable {
+  padding: 5px;
+  /*margin: 10px;*/
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
         .auto-style1 {  
             width: 100%;  
         }  
@@ -60,11 +212,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                    <a class="navbar-brand" runat="server" href="~/">Apple Store</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/Index">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                         <li><a runat="server" href="~/product">product</a></li>
@@ -77,70 +229,9 @@
             </asp:ContentPlaceHolder>
             <hr />
 
-<div data-role="page" id="pageone">
-  <div data-role="header">
-    <h1>Welcome To My Homepage</h1>
-  </div>
 
-  <div data-role="main" class="ui-content">
-    <p>Categories</p>
-    <a href="#pagetwo">Go to Page Two</a>
-    <a href="#pagetwo">Go to Page Two</a>
-    <a href="#pagetwo">Go to Page Two</a>
-    <a href="#pagetwo">Go to Page Two</a>
-  </div>
-
-  <div data-role="footer">
-    <h1>Footer Text</h1>
-  </div>
-</div> 
-
-<div data-role="page" id="pagetwo">
-  <div data-role="header">
-    <h1>Welcome To My Homepage</h1>
-  </div>
-
-  <div data-role="main" class="ui-content">
-    <p>This is Page Two. If you click on the link below, it will take you to Page One.</p>
-    <a href="#pageone">Go to Page One</a>
-  </div>
-
-  <div data-role="footer">
-    <h1>Footer Text</h1>
-  </div>
-</div>
-
-<div data-role="page" id="pagetwo">
-  <div data-role="header">
-    <h1>Welcome To My Homepage</h1>
-  </div>
-
-  <div data-role="main" class="ui-content">
-    <p>This is Page Two. If you click on the link below, it will take you to Page One.</p>
-    <a href="#pageone">Go to Page One</a>
-  </div>
-
-  <div data-role="footer">
-    <h1>Footer Text</h1>
-  </div>
-</div>
-
-<div data-role="page" id="pagetwo">
-  <div data-role="header">
-    <h1>Welcome To My Homepage</h1>
-  </div>
-
-  <div data-role="main" class="ui-content">
-    <p>This is Page Two. If you click on the link below, it will take you to Page One.</p>
-    <a href="#pageone">Go to Page One</a>
-  </div>
-
-  <div data-role="footer">
-    <h1>Footer Text</h1>
-  </div>
-</div>
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>&copy; <%: DateTime.Now.Year %> -Apple Store</p>
             </footer>
         </div>
 

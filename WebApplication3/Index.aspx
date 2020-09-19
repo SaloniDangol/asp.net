@@ -1,8 +1,8 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication3._Default" %>
-
+﻿
+<%@ Page Title="Index" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="WebApplication3.Index" %>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
-     <div>
+    
+        <div>
             <div class="row">
   
   <div class="main">
@@ -33,5 +33,5 @@
     
 </div>
         </div>
-
+   
 </asp:Content>
