@@ -219,7 +219,8 @@ h3 {
                         <li><a runat="server" href="~/Index">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
-                        <li><a runat="server" href="~/product">product</a></li>
+                        <li><a runat="server" href="~/Category">Category</a></li>
+                        <li><a runat="server" href="~/product">Product</a></li>
                     </ul>
                 </div>
             </div>
